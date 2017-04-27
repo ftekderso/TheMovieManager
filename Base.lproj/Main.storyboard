@@ -266,6 +266,7 @@
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="backView" destination="SuL-LH-Q3O" id="cES-b6-UoM"/>
                         <outlet property="overviewTextView" destination="kha-Hh-Rfe" id="aP9-oz-rdZ"/>
                         <outlet property="releaseDateLbl" destination="qhH-EA-SXv" id="EX1-tD-qlk"/>
                         <outlet property="smallImageView" destination="puZ-SZ-odY" id="Yn4-ZA-BFq"/>

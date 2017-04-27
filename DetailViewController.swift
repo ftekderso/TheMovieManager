@@ -15,6 +15,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var releaseDateLbl: UILabel!
     @IBOutlet weak var overviewTextView: UITextView!
+    @IBOutlet weak var backView: UIView!
     
     var smallImage: UIImage?
     var vote: String?
@@ -35,6 +36,15 @@ class DetailViewController: UIViewController {
         
         self.voteLable.text = vote!
         self.overviewTextView.text = overviewText
+        self.backView.backgroundColor = UIColor(patternImage: smallImage!)
+        
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.regular)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = self.backView.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.backView.addSubview(blurEffectView)
+        self.backView.bringSubview(toFront: smallImageView)
+ 
     }
 
     override func didReceiveMemoryWarning() {
